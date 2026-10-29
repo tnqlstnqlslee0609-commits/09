@@ -1,16 +1,22 @@
 #include <stdio.h>
+#include <stdlib.h>
+
+#define SIZE    5
 
 int main(void)
 {
     int i;
-    int score[5];
+    int score[SIZE];
+    int sum = 0;
+    printf("5명의 점수를 입력하세요.\n");
 
-    score[0] = 100;
-    score[1] = 90;
-    score[2] = 80;
-    score[3] = 70;
-    score[4] = 60;
-    for(i=0;i<5;i++)
-     printf("score[%d] = %d\n", i, score[i]);
+    for(i=0;i<SIZE;i++)
+    {   scanf("%d", &score[i]);
+        sum += score[i];
+    }
+
+    printf("성적평균:%d\n", sum/SIZE);
+    
+
     return 0;
 }
